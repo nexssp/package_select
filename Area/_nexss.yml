@@ -1,0 +1,9 @@
+name: Area
+debug: true
+output:
+  - name: X1
+  - name: Y1
+  - name: X2
+  - name: Y2
+files:
+  - name: src/selectDesktopArea.au3
