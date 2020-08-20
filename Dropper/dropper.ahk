@@ -1,10 +1,10 @@
-; Nexss PROGRAMMER 2.x - Auto Hot Ke
+; Nexss PROGRAMMER 2.x - Dropper
 ; SETUP
 EnvGet, NEXSS_PACKAGES_PATH, NEXSS_PACKAGES_PATH
 #Include %A_AppData%/../../.nexss/packages/Nexss/Lib/NexssIn.ahk
 #Include %A_AppData%/../../.nexss/packages/Nexss/Lib/NexssLog.ahk
 
-#SingleInstance, force
+#SingleInstance, Off
 ; ======================================================
 
 ; InputBox, OutputVar [, Title, Prompt, HIDE, Width, Height, X, Y, Locale, Timeout, Default]
