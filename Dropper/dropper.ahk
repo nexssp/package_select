@@ -76,14 +76,28 @@ try icon:=NexssStdout["_icon"]
 catch e {
 }
 
+version:="<undefined>"
+try version:=NexssStdout["nexss"]
+catch e {
+}
+
 Menu, tray, Icon , %icon%, 1, 1
 Gui, Dropper: New 
 Gui, Dropper: +AlwaysOnTop +Resize -MaximizeBox
 Gui, Dropper: Font, s22
-Gui, Dropper: Add, Text, y80 vText1, %text%
+Gui, Dropper: Add, Text, x20 y10 vText1, %text%
+; Horizontal light is shorter
+widthHR:=width-20
+Gui, Dropper: Add, text, x10 y50 w%widthHR% 0x10  ;Horizontal Line > Etched Gray
+Gui, Dropper: Font, s08
+Gui, Dropper: Add, Link, x10 y60, Nexss Programmer %version%
+Gui, Dropper:  Font, underline
+Gui, Dropper: Add, Link, x10 y80, by <a href="www.nexss.com">nexss.com</a> 2007-%A_YYYY%
+Gui, Dropper: Font, norm
+
 ; Gui, Dropper: Add, Button, x206 y117 w120 h20 gRed, Red
 Gui, Dropper: Show, w%width% h%height% x%x% y%y% %autosize% %centr%, %title%
-Gui, Color, %color%
+Gui, Dropper: Color, %color%
 Gui +LastFound  ; Make the GUI window the last found window for use by the line below.
 WinSet, TransColor, 111199 %trans%
 
@@ -109,12 +123,11 @@ DroppedFile:=A_GuiEvent
 return
 
 
-if (ErrorLevel){
+if (ErrorLevel) {
     nxsError("Cancelled.")
     Exit 1
 }   
-else{
-    NexssStdout.xxxxxxxxxxxxxxxxxxxxxx:=111111111111111111
+else {
     NexssStdout[NexssStdout.resultField_1]:=ReturnValue
 }
 
