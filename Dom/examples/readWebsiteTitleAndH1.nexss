@@ -1,0 +1,6 @@
+https://nexss.com --nxsAs=myWebsiteSource
+Select/Dom --nxsInFrom=myWebsiteSource --_selector=title
+Speak
+Select/Dom --nxsInFrom=myWebsiteSource --_selector=h1
+Speak
+Output/End "Done."

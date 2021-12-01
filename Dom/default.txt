@@ -1,0 +1,8 @@
+{
+  "nexss": "2.5.82",
+  "__dirname": ".\\examples",
+  "myWebsite": "",
+  "nxsIn": [
+    "Done."
+  ]
+}
